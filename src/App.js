@@ -6,7 +6,6 @@ import Launches from "./pages/Launches";
 const App = () => {
   return (
     <div>
-      <h1>Header</h1>
       <Router>
         <Switch>
           <Route exact path="/" component={Home} />
@@ -14,7 +13,6 @@ const App = () => {
           <Route component={Error} />
         </Switch>
       </Router>
-      <h1>Footer</h1>
     </div>
   );
 };

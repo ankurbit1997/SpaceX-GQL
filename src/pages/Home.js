@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
+import HomeHero from "../components/HomeHero";
 
-import "./Home.scss";
+import "../_base.scss";
 
 const Home = () => {
+  useEffect(() => {
+    document.title = "Home";
+  }, []);
+
   return (
-    <div className="home">
-      <h1>Home</h1>
-    </div>
+    <>
+      <HomeHero data="test" />
+    </>
   );
 };
 

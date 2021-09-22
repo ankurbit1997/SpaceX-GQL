@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Error from "./pages/Error";
 import Home from "./pages/Home";
 import Launches from "./pages/Launches";
+
 const App = () => {
   return (
     <div>

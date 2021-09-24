@@ -1,10 +1,17 @@
 import React from "react";
 
-const HomeHero = ({ data }) => {
-  console.log(data);
+import "./HomeHero.scss";
+
+const HomeHero = ({ data, background }) => {
   return (
-    <div>
-      <h1>Home Hero</h1>
+    <div
+      className="home-hero"
+      style={{ backgroundImage: `url(${background})` }}
+    >
+      <div className="home-hero__container">
+        <h1>{data?.company?.name}</h1>
+        <p>{data?.company?.summary}</p>
+      </div>
     </div>
   );
 };

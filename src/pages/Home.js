@@ -5,6 +5,7 @@ import "../_base.scss";
 import Loading from "../components/Loading";
 
 import background from "../images/starship.jpg";
+import Header from "../components/header";
 
 const GET_MAIN = gql`
   {
@@ -34,6 +35,7 @@ const Home = () => {
   }
   return (
     <>
+      <Header />
       <HomeHero data={data} background={background} />
     </>
   );

@@ -15,7 +15,7 @@ const ROCKET_DATA = gql`
 `;
 
 const RocketPage = ({ match }) => {
-  console.log(match.params.id);
+  //   console.log(match.params.id);
   const rocketId = match.params.id;
   const { data, loading, error } = useQuery(ROCKET_DATA, {
     variables: { rocketId },
@@ -30,7 +30,7 @@ const RocketPage = ({ match }) => {
   if (data.rocket === null) {
     return <h1 style={{ textAlign: "center" }}>rocket does not exist</h1>;
   }
-  console.log(data);
+  //   console.log(data);
   return (
     <div>
       <h1>hi from {data?.rocket?.name}</h1>

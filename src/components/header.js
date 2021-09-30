@@ -32,7 +32,9 @@ const Header = () => {
   return (
     <div className="header" ref={ref}>
       <div className="header__navigation">
-        <h1>SpaceX</h1>
+        <Link to="/">
+          <h1>SpaceX</h1>
+        </Link>
         <nav>
           {data.rockets.map((item, i) => (
             <Link key={i} to={`/rocket/${item.id}`}>
@@ -41,14 +43,17 @@ const Header = () => {
           ))}
         </nav>
         <div className="header__navigation__menu">
-          <span
-            onClick={() => setIsShow(!isShow)}
-            className={isShow && `active`}
-          ></span>
+          <span onClick={() => setIsShow(!isShow)}>
+            <div className={isShow ? `bar-1 active` : `bar-1`}></div>
+            <div className={isShow ? `bar-2 active` : `bar-2`}></div>
+            <div className={isShow ? `bar-3 active` : `bar-3`}></div>
+          </span>
         </div>
       </div>
       <div className={isShow ? `header__flyout active` : `header__flyout`}>
-        flyout
+        <div className="header__flyout__links">
+          <Link to="/">Past Launches</Link>
+        </div>
       </div>
     </div>
   );

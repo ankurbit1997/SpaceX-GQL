@@ -6,6 +6,7 @@ import Loading from "../components/Loading";
 
 import background from "../images/starship.jpg";
 import Header from "../components/header";
+import Footer from "../components/footer";
 
 const GET_MAIN = gql`
   {
@@ -37,6 +38,7 @@ const Home = () => {
     <>
       <Header />
       <HomeHero data={data} background={background} />
+      <Footer />
     </>
   );
 };

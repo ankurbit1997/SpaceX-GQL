@@ -68,12 +68,22 @@
       width: 400px;
     }
     &__links {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
       a {
         text-decoration: none;
         color: inherit;
         font-size: 1.2rem;
+        margin-bottom: 1rem;
         position: relative;
+        &:not(:nth-child(1)) {
+          @media screen and (min-width: 900px) {
+            display: none;
+          }
+        }
       }
+
       a:after {
         content: "";
         position: absolute;

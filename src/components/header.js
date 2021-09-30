@@ -52,7 +52,12 @@ const Header = () => {
       </div>
       <div className={isShow ? `header__flyout active` : `header__flyout`}>
         <div className="header__flyout__links">
-          <Link to="/">Past Launches</Link>
+          <Link to="/launches">Past Launches</Link>
+          {data.rockets.map((item, i) => (
+            <Link key={i} to={`/rocket/${item.id}`}>
+              {item.name}
+            </Link>
+          ))}
         </div>
       </div>
     </div>

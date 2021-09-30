@@ -10,6 +10,11 @@ footer {
     color: inherit;
     text-transform: uppercase;
     font-size: 0.8rem;
+    transition: all 0.3s ease;
+    position: relative;
+    &:hover {
+      color: rgba($color: #ffffff, $alpha: 0.8);
+    }
   }
   div {
     display: flex;

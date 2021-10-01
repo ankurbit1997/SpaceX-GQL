@@ -1,0 +1,88 @@
+.past-launch {
+  min-height: 100vh;
+  background-color: black;
+  padding: 6rem 1.5rem 2rem 1.5rem;
+  color: white;
+  text-align: center;
+  @media screen and (min-width: 900px) {
+    padding: 8rem 2rem 2rem 2rem;
+  }
+  border-bottom: 1px solid white;
+  h1 {
+    margin-bottom: 1rem;
+    font-weight: normal;
+    line-height: 1.2;
+    font-size: 1.5rem;
+    @media screen and (min-width: 900px) {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+  h2 {
+    margin-bottom: 1rem;
+    font-weight: normal;
+    line-height: 1.2;
+    font-size: 1.2rem;
+    margin-top: 1.8rem;
+    @media screen and (min-width: 900px) {
+      font-size: 1.6rem;
+      margin-top: 2rem;
+    }
+  }
+  p {
+    margin-top: 2rem;
+  }
+  &__gallery {
+    & > div {
+      overflow: hidden;
+      width: 100%;
+      margin: 0 auto;
+      @media screen and (min-width: 900px) {
+        width: 80%;
+      }
+    }
+    img {
+      height: 500px;
+      width: 800px;
+      object-fit: cover;
+    }
+    .slick-arrow.slick-prev {
+      z-index: 5;
+      left: 25px;
+    }
+    .slick-arrow.slick-next {
+      z-index: 5;
+      right: 25px;
+    }
+    .slick-dots {
+      position: unset;
+    }
+  }
+  &__links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    @media screen and (min-width: 900px) {
+      gap: 30px;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid white;
+      padding: 0.4rem 1rem;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &:hover {
+        background-color: white;
+        color: black;
+      }
+      @media screen and (min-width: 900px) {
+        padding: 0.5rem 1.2rem;
+      }
+    }
+  }
+}

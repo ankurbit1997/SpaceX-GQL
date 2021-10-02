@@ -3,7 +3,6 @@ import React from "react";
 import "./rocket.scss";
 
 const Rocket = ({ data, id }) => {
-  console.log(data, id);
   const imgStyle = {
     backgroundImage: "url(../assets/" + id + ".jpg)",
     backgroundPosition: "center center",

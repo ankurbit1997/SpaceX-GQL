@@ -1,0 +1,41 @@
+.rocket {
+  &__header {
+    display: flex;
+    color: white;
+    padding: 4rem 1.5rem 4rem 1.5rem;
+    font-weight: normal;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    background-blend-mode: multiply;
+    @media screen and (min-width: 900px) {
+      padding: 8rem 2rem 8rem 2rem;
+    }
+    h1 {
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    h1 {
+      @media screen and (min-width: 900px) {
+        font-size: 4rem;
+      }
+    }
+    p {
+      max-width: 800px;
+      text-align: center;
+    }
+    a {
+      margin-top: 2rem;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid white;
+      padding: 0.4rem 1.6rem;
+      transition: all 0.3s ease;
+      &:hover {
+        background: white;
+        color: black;
+      }
+    }
+  }
+}
